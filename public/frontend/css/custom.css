@@ -22,3 +22,60 @@
 .detail__title {
     text-transform: uppercase;
 }
+
+.page__contact .module .module__content .button {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.page__contact .module .module__content .click-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #037f8c;
+    border-radius: 20px;
+}
+
+.page__contact .module .module__content .click-btn img {
+    width: 35px;
+    height: 35px;
+}
+
+.page__contact .module .module__content .click-btn.acc {
+    opacity: 1;
+    visibility: initial;
+}
+
+@media (max-width: 767.98px) { 
+    .page__contact .module .module__content .click-btn {
+        width: 100%;
+        height: 40px;
+    }
+}
+
+@media (min-width: 767.98px) { 
+    .page__contact .module .module__content .click-btn {
+        width: 44%;
+    }
+}
+
+@media (min-width: 1023.98px) { 
+    .page__contact .module .module__content .click-btn {
+        width: 32%;
+    }
+}
+
+@media (min-width: 1299.98px) { 
+    .page__contact .module .module__content .click-btn {
+        width: 23%;
+    }
+}

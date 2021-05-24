@@ -35,9 +35,67 @@
 	<link href="{{ captcha_layout_stylesheet_url() }}" type="text/css" rel="stylesheet">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	@if (!empty($site_info->ticktok))
+	<!-- Ticktok -->
+		<script>
+			(function() {
+				var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
+				ta.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid={{ $site_info->ticktok }}';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ta, s);
+			})();
+		</script>
+	@endif
+
+	@if (!empty($site_info->google_analytics))
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id={{ $site_info->google_analytics }}"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', '{{ $site_info->google_analytics }}');
+		</script>
+	@endif
+
+
+	@if (!empty($site_info->google_tag_manager))
+	<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','{{ $site_info->google_tag_manager }}');</script>
+	@endif
  	
 </head> 
 	<body>
+
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ @$site_info->google_tag_manager }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+		@if (!empty($site_info->facebook_pixel))
+		<!-- Facebook Pixel -->
+			<script>
+				!function(f,b,e,v,n,t,s)
+				{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+				if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+				n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];
+				s.parentNode.insertBefore(t,s)}(window, document,'script',
+				'https://connect.facebook.net/en_US/fbevents.js');
+				fbq('init', '{{ $site_info->facebook_pixel }}');
+				fbq('track', 'PageView');
+		  </script>
+		@endif
+
+		@if (!empty($site_info->facebook_chat))
+			{!! $site_info->facebook_chat !!}
+		@endif
+
+		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ @$site_info->facebook_pixel }}&ev=PageView&noscript=1"/></noscript>
 		
 		<div class="loadingcover" style="display: none;">
 			<p class="csslder">

@@ -10,7 +10,7 @@ $(document).ready(function() {
 
         e.preventDefault();
 
-        $('.loadingcover').show();
+        $('.click-btn').addClass('acc');
 
         var data = new FormData($('#frm_contact')[0]);
 
@@ -95,7 +95,7 @@ $(document).ready(function() {
 
                 }
 
-                $('.loadingcover').hide();
+                $('.click-btn').removeClass('acc');
 
             }
 

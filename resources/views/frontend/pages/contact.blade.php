@@ -63,8 +63,13 @@
 								<span class="fr-error" id="error_captchacode"></span>
 							</div>
 							<input type="hidden" name="type" value="contact">
-							<button class="btn btn__view btn--18 btn_contactform">{{ trans('message.gui') }}</button>
-							<button type="reset" class="btn btn__reset btn--18">{{ trans('message.nhap_lai') }}</button>
+							<div class="button">
+								<button class="btn btn__view btn--18 btn_contactform">{{ trans('message.gui') }}</button>
+								<button type="reset" class="btn btn__reset btn--18">{{ trans('message.nhap_lai') }}</button>
+								<div class="click-btn">
+									<span class=""><img src="{{ url('/uploads/images/rotate-pulsating-loading-animation.gif') }}" alt="loading"></span>
+								</div>
+							</div>
 						</form>
 					</div>
 					<div class="col-12 col-md-6">
