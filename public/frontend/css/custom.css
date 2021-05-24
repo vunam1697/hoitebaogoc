@@ -1,0 +1,24 @@
+.time__global span {
+    text-transform: capitalize;
+}
+
+.page__post .new .new__title a {
+    text-decoration: none;
+    color: #037f8c;
+}
+
+.page__cells .module-page__cells .module__content .tab-container .tab-content .tab-item .executive__box .executive__content p+p {
+    margin-top: 0;
+}
+
+.fr-error {
+    color: red;
+}
+
+.banner__title {
+    text-transform: uppercase;
+}
+
+.detail__title {
+    text-transform: uppercase;
+}
