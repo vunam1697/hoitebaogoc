@@ -52,46 +52,15 @@
                             {{ trans('message.thong_bao') }}
                         </h3>
                         <div class="sidebar__body">
-                            <a href="#"
-                                class="sidebar__info"
-                                title="Thông báo mời nộp hồ sơ đăng ký đề tài Tiềm năng năm 2018
-                                theo Thông tư số 67/2014/TT-BKHCN - 08/03/2019">
-                                <span class="icon__info"></span>
-                                <p>
-                                    Thông báo mời nộp hồ sơ đăng ký đề tài Tiềm năng năm 2018
-                                    theo Thông tư số 67/2014/TT-BKHCN - 08/03/2019
-                                </p>
-                            </a>
-                            <a href="#"
-                                class="sidebar__info"
-                                title="Thông báo mời nộp hồ sơ đăng ký đề tài Tiềm năng năm 2018
-                                theo Thông tư số 67/2014/TT-BKHCN - 08/03/2019">
-                                <span class="icon__info"></span>
-                                <p>
-                                    Thông báo mời nộp hồ sơ đăng ký đề tài Tiềm năng năm 2018
-                                    theo Thông tư số 67/2014/TT-BKHCN - 08/03/2019
-                                </p>
-                            </a>
-                            <a href="#"
-                                class="sidebar__info"
-                                title="Thông báo mời nộp hồ sơ đăng ký đề tài Tiềm năng năm 2018
-                                theo Thông tư số 67/2014/TT-BKHCN - 08/03/2019">
-                                <span class="icon__info"></span>
-                                <p>
-                                    Thông báo mời nộp hồ sơ đăng ký đề tài Tiềm năng năm 2018
-                                    theo Thông tư số 67/2014/TT-BKHCN - 08/03/2019
-                                </p>
-                            </a>
-                            <a href="#"
-                                class="sidebar__info"
-                                title="Thông báo mời nộp hồ sơ đăng ký đề tài Tiềm năng năm 2018
-                                theo Thông tư số 67/2014/TT-BKHCN - 08/03/2019">
-                                <span class="icon__info"></span>
-                                <p>
-                                    Thông báo mời nộp hồ sơ đăng ký đề tài Tiềm năng năm 2018
-                                    theo Thông tư số 67/2014/TT-BKHCN - 08/03/2019
-                                </p>
-                            </a>
+                            @foreach ($notification as $item)
+                                <a href="{{ app()->getLocale() == 'vi' ? route('home.notification-single_vi', ['slug'=> $item->slug]) : route('home.notification-single_en', ['slug'=> $item->slug_en]) }}"
+                                    class="sidebar__info" title="{{ app()->getLocale() == 'vi' ? $item->name : $item->name_en }}">
+                                    <span class="icon__info"></span>
+                                    <p>
+                                        {{ app()->getLocale() == 'vi' ? $item->name : $item->name_en }}
+                                    </p>
+                                </a>
+                            @endforeach
                         </div>
                     </div>
                 </div>

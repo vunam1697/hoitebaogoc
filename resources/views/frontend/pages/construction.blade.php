@@ -5,7 +5,7 @@
     <div class="banner__box">
         <div class="container">
             <h2 class="banner__title">
-                {{ $dataSeo->meta_title }}
+                {!! $dataSeo->meta_title !!}
             </h2>
         </div>
     </div>

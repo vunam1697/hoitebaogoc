@@ -147,7 +147,7 @@ class IndexController extends Controller
     { 
     	$this->createSeo();
         $slider = Image::where('type', 'slider')->where('status', 1)->orderBy('created_at', 'DESC')->get();
-        $contentHome = Pages::where('type', 'home')->first();
+        $contentHome = Pages::where('type', 'home')->whereLang(app()->getLocale())->first();
         $content = json_decode(@$contentHome->content);
         $news = Posts::where(['status' => 1, 'hot' => 1, 'type' => 'blog'])->orderBy('created_at','DESC')->take(5)->get();
 
@@ -240,10 +240,11 @@ class IndexController extends Controller
         $dataSeo = Pages::where('type', 'news_events')->whereLang(app()->getLocale())->first();
         $data = Posts::where('type', 'blog')->where('status', 1)->where('slug', $slug)->orWhere('slug_en', $slug)->firstOrFail();
         $this->createSeoPost($data);
+        $notification = Posts::where('type', 'notification')->where('status', 1)->take(4)->orderBy('created_at', 'DESC')->get();
         
         $post_same = Posts::where('id', '!=', $data->id)->where('type', 'blog')->where('status', 1)->orderBy('created_at', 'DESC')->take(4)->get();
         
-        return view('frontend.pages.single-news', compact('dataSeo', 'data', 'post_same'));
+        return view('frontend.pages.single-news', compact('dataSeo', 'data', 'post_same', 'notification'));
     }
     
     public function getQuestion() {

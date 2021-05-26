@@ -64,4 +64,6 @@ return [
     'chu_tich_hoi' => 'Chủ tịch hội',
     'tong_thu_ki' => 'Tổng thư kí',
     'nhung_cau_hoi_khac' => 'Những câu hỏi khác',
+    'nghien_cuu_dao_tao_tbg' => 'Nghiên cứu - Đào tạo tế bào gốc',
+    'cong_trinh_nghien_cuu_cua_hoi_vien' => 'Công trình nghiên cứu của hội viên',
 ];

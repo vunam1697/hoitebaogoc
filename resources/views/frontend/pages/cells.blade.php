@@ -415,7 +415,7 @@
                                         {!! @$content->content7->content !!}
                                     </div>
                                     <div class="cells__item">
-                                        <img src="{{ @$content->content7->title }}" alt="{{ @$content->content7->title }}"/>
+                                        <img src="{{ @$content->content7->image }}" alt="{{ @$content->content7->title }}"/>
                                     </div>
                                 </div>
                             </div>

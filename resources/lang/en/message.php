@@ -62,4 +62,6 @@ return [
     'chu_tich_hoi' => 'Association President',
     'tong_thu_ki' => 'General secretary',
     'nhung_cau_hoi_khac' => 'Other questions',
+    'nghien_cuu_dao_tao_tbg' => 'Research - Stem cell training',
+    'cong_trinh_nghien_cuu_cua_hoi_vien' => 'Member research work',
 ];
