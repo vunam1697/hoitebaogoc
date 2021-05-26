@@ -79,6 +79,8 @@ Route::group(['middleware' => 'locale'], function () {
 
     Route::get('/en/notification/{slug}', 'IndexController@getSingleNotification')->name('home.notification-single_en');
 
+    Route::get('/refresh-captcha', 'IndexController@refreshCaptcha')->name('home.refresh-captcha');
+
 });
 
 Route::group(['namespace' => 'Admin'], function () {

@@ -369,7 +369,7 @@ class IndexController extends Controller
         if ($request->CaptchaCode == '' || $request->CaptchaCode == null) {
             $result['message_captchacode'] = trans('message.ban_chua_nhap_ma_captcha');
         } else {
-            $check = captcha_validate($request->CaptchaCode);
+            $check = captcha_check($request->CaptchaCode);
             if (!$check) {
                 $result['message_captchacode'] = trans('message.sai_ma_captcha');
             }
@@ -430,6 +430,10 @@ class IndexController extends Controller
         $result['notification'] = trans('mesage.thong_bao');
 
         return json_encode($result);
+    }
+
+    public function refreshCaptcha() {
+        return response()->json(['captcha'=> captcha_img()]);
     }
 
 }

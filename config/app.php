@@ -160,7 +160,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        LaravelCaptcha\Providers\LaravelCaptchaServiceProvider::class,
+        // LaravelCaptcha\Providers\LaravelCaptchaServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -190,6 +190,8 @@ return [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
 
         Proengsoft\JsValidation\JsValidationServiceProvider::class,
+
+        Mews\Captcha\CaptchaServiceProvider::class,
 
 
     ],
@@ -253,6 +255,8 @@ return [
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
 
         'JsValidator' => Proengsoft\JsValidation\Facades\JsValidatorFacade::class,
+
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
     ],
 
 ];

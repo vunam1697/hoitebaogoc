@@ -58,7 +58,12 @@
 								<span class="fr-error" id="error_myfile"></span>
 							</div>
 							<div class="form-group">
-								{!! captcha_image_html('ExampleCaptcha') !!}
+								<div class="captcha">
+									<span>{!! captcha_img() !!}</span>
+									<button type="button" class="btn btn-success"><i class="fa fa-refresh" id="refresh"></i></button>
+								</div>
+							</div>
+							<div class="form-group">
 								<input type="text"id="CaptchaCode" name="CaptchaCode">
 								<span class="fr-error" id="error_captchacode"></span>
 							</div>
@@ -83,3 +88,16 @@
 	</div>
 </section>
 @stop
+@section('script')
+	<script>
+		$('#refresh').click(function(){
+			$.ajax({
+				type:'GET',
+				url:'{{ route('home.refresh-captcha') }}',
+				success:function(data){
+					$(".captcha span").html(data.captcha);
+				}
+			});
+		});
+	</script>
+@endsection
