@@ -39,7 +39,7 @@ class ResourcesController extends Controller
     {
         return [
             'name' => 'required',
-            'name_en' => 'required',
+            // 'name_en' => 'required',
             'image' => 'required',
         ];
     }
@@ -49,7 +49,7 @@ class ResourcesController extends Controller
     {
         return [
             'name.required' => 'Tiêu để tiếng việt không được bỏ trống.',
-            'name_en.required' => 'Tiêu để tiếng anh không được bỏ trống.',
+            // 'name_en.required' => 'Tiêu để tiếng anh không được bỏ trống.',
             'image.required' => 'Bạn chưa chọn hình ảnh',
         ];
     }

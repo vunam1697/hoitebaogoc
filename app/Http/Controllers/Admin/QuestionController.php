@@ -35,9 +35,9 @@ class QuestionController extends Controller
     {
         return [
             'name' => 'required',
-            'name_en' => 'required',
+            // 'name_en' => 'required',
             'content' => 'required',
-            'content_en' => 'required',
+            // 'content_en' => 'required',
         ];
     }
 
@@ -46,9 +46,9 @@ class QuestionController extends Controller
     {
         return [
             'name.required' => 'Câu hỏi tiếng việt không được bỏ trống.',
-            'name_en.required' => 'Câu hỏi tiếng anh không được bỏ trống.',
+            // 'name_en.required' => 'Câu hỏi tiếng anh không được bỏ trống.',
             'content.required' => 'Câu trả lời tiếng việt không được bỏ trống.',
-            'content_en.required' => 'Câu trả lời tiếng anh không được bỏ trống.',
+            // 'content_en.required' => 'Câu trả lời tiếng anh không được bỏ trống.',
         ];
     }
 

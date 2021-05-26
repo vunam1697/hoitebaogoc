@@ -89,13 +89,13 @@ class PostController extends Controller
         $this->validate($request,
             [
                 'name'  => 'required',
-                'name_en'  => 'required',
+                // 'name_en'  => 'required',
                 'image' => 'required',
                 'type'  => 'required',
             ],
             [
                 'name'   => 'Bạn chưa nhập tên bài viết tiếng việt',
-                'name_en'   => 'Bạn chưa nhập tên bài viết tiếng anh',
+                // 'name_en'   => 'Bạn chưa nhập tên bài viết tiếng anh',
                 'image.required' => 'Bạn chưa chọn ảnh',
                 'type'           => 'Sai định dạng.',
             ]
@@ -138,14 +138,14 @@ class PostController extends Controller
          $this->validate($request,
             [
                 'name' => 'required',
-                'name_en'  => 'required',
+                // 'name_en'  => 'required',
                 'image' => 'required',
                 'type'  => 'required',
                
             ],
             [
                 'name.required' => 'Bạn chưa nhập tên bài viết tiếng việt',
-                'name_en.required'   => 'Bạn chưa nhập tên bài viết tiếng anh',
+                // 'name_en.required'   => 'Bạn chưa nhập tên bài viết tiếng anh',
                 'image.required' => 'Bạn chưa chọn ảnh',
                 'type'           => 'Sai định dạng.',
             ]

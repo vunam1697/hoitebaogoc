@@ -85,12 +85,12 @@ class NotificationController extends Controller
         $this->validate($request,
             [
                 'name'  => 'required',
-                'name_en'  => 'required',
+                // 'name_en'  => 'required',
                 'type'  => 'required',
             ],
             [
                 'name'   => 'Bạn chưa nhập thông báo tiếng việt',
-                'name_en'   => 'Bạn chưa nhập thông báo tiếng anh',
+                // 'name_en'   => 'Bạn chưa nhập thông báo tiếng anh',
                 'type'           => 'Sai định dạng.',
             ]
         );
@@ -131,13 +131,13 @@ class NotificationController extends Controller
          $this->validate($request,
             [
                 'name' => 'required',
-                'name_en'  => 'required',
+                // 'name_en'  => 'required',
                 'type'  => 'required',
                
             ],
             [
                 'name.required' => 'Bạn chưa nhập tên bài viết tiếng việt',
-                'name_en.required'   => 'Bạn chưa nhập tên bài viết tiếng anh',
+                // 'name_en.required'   => 'Bạn chưa nhập tên bài viết tiếng anh',
                 'type'           => 'Sai định dạng.',
             ]
         );

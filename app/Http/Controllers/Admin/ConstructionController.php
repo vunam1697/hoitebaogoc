@@ -35,7 +35,7 @@ class ConstructionController extends Controller
     {
         return [
             'name' => 'required',
-            'name_en' => 'required',
+            // 'name_en' => 'required',
         ];
     }
 
@@ -44,7 +44,7 @@ class ConstructionController extends Controller
     {
         return [
             'name.required' => 'Tiêu đề tiếng việt không được bỏ trống.',
-            'name_en.required' => 'Tiêu đề tiếng anh không được bỏ trống.',
+            // 'name_en.required' => 'Tiêu đề tiếng anh không được bỏ trống.',
         ];
     }
 
