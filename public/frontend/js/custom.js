@@ -91,6 +91,8 @@ $(document).ready(function() {
 
                     $('#frm_contact')[0].reset();
 
+                    $(".captcha span").html(data.captcha);
+
                     toastr["success"](data.success, data.notification);
 
                 }

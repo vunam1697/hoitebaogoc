@@ -428,6 +428,7 @@ class IndexController extends Controller
         
         $result['success'] = trans('message.thong_bao_thanh_cong');
         $result['notification'] = trans('message.thong_bao');
+        $result['captcha'] = captcha_img();
 
         return json_encode($result);
     }

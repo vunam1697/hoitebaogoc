@@ -31,8 +31,6 @@
 	<link rel="stylesheet" type="text/css" title="" href="{{ __BASE_URL__ }}/css/custom.css">
 	
 	<link rel="stylesheet" type="text/css" title="" href="{{ __BASE_URL__ }}/css/toastr.min.css">
-
-	<link href="{{ captcha_layout_stylesheet_url() }}" type="text/css" rel="stylesheet">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
