@@ -18,8 +18,8 @@
 					{{ trans('message.thong_tin_lien_he') }}:
 				</h2>
 				<p class="info">
-					{{ trans('message.chu_tich_hoi') }}: {{ @$site_info->name_company }}<br/>
-					{{ trans('message.tong_thu_ki') }}: {{ @$site_info->name_company_en }}
+					{{ trans('message.chu_tich_hoi') }}: {{ app()->getLocale() == 'vi' ? @$site_info->chairman : @$site_info->chairman_en }}<br/>
+					{{ trans('message.tong_thu_ki') }}: {{ app()->getLocale() == 'vi' ? @$site_info->secretary : @$site_info->secretary_en }}
 				</p>
 			</div>
 			<div class="module__content">

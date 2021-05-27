@@ -155,8 +155,12 @@
 			               		<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label for="">Chủ tịch hội</label>
-											<input type="text" name="content[name_company]" class="form-control" value="{{ @$content->name_company }}">
+											<label for="">Chủ tịch hội tiếng việt</label>
+											<input type="text" name="content[chairman]" class="form-control" value="{{ @$content->chairman }}">
+										</div>
+										<div class="form-group">
+											<label for="">Chủ tịch hội tiếng anh</label>
+											<input type="text" name="content[chairman_en]" class="form-control" value="{{ @$content->chairman_en }}">
 										</div>
 										<div class="form-group">
 											<label for="">Email</label>
@@ -165,8 +169,12 @@
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label for="">Tổng thư ký</label>
-											<input type="text" name="content[name_company_en]" class="form-control" value="{{ @$content->name_company_en }}">
+											<label for="">Tổng thư ký tiếng việt</label>
+											<input type="text" name="content[secretary]" class="form-control" value="{{ @$content->secretary }}">
+										</div>
+										<div class="form-group">
+											<label for="">Tổng thư ký tiếng anh</label>
+											<input type="text" name="content[secretary_en]" class="form-control" value="{{ @$content->secretary_en }}">
 										</div>
 										<div class="form-group">
 											<label for="">Email</label>

@@ -39,7 +39,7 @@
 			                                        @if (!empty($data->file_upload))
 			                                        	<tr>
 				                                            <td>File upload</td>
-				                                            <td><a href="{{ $data->file_upload }}" target="_blank">{{ $data->file_upload }}</a></td>
+				                                            <td><a href="{{ url($data->file_upload) }}" target="_blank">{{ url($data->file_upload) }}</a></td>
 				                                        </tr>
 			                                        @endif
 							                  </tbody>

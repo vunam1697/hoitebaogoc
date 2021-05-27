@@ -427,7 +427,7 @@ class IndexController extends Controller
         }
         
         $result['success'] = trans('message.thong_bao_thanh_cong');
-        $result['notification'] = trans('mesage.thong_bao');
+        $result['notification'] = trans('message.thong_bao');
 
         return json_encode($result);
     }

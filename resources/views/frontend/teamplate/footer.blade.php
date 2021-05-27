@@ -12,11 +12,11 @@
 				</h2>
 				<ul class="footer__list">
 					<li>
-						<span>{{ trans('message.chu_tich_hoi') }}: {{ @$site_info->name_company }}</span>
+						<span>{{ trans('message.chu_tich_hoi') }}: {{ app()->getLocale() == 'vi' ? @$site_info->chairman : @$site_info->chairman_en }}</span>
 						<a href="mailto:{{ @$site_info->email_1 }}">Email: {{ @$site_info->email_1 }}</a>
 					</li>
 					<li>
-						<span>{{ trans('message.tong_thu_ki') }}: {{ @$site_info->name_company_en }}</span>
+						<span>{{ trans('message.tong_thu_ki') }}: {{ app()->getLocale() == 'vi' ? @$site_info->secretary : @$site_info->secretary_en }}</span>
 						<a href="mailto:{{ @$site_info->email_2 }}">
 							Email: {{ @$site_info->email_2 }}
 						</a>
