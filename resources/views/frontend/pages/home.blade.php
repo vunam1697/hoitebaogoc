@@ -77,7 +77,9 @@
                             <div class="new__slide-item">
                                 <div class="new__slide-box">
                                     <div class="new__avata frame">
+                                        <a href="{{ app()->getLocale() == 'vi' ? route('home.news-single_vi', ['slug'=> $item->slug]) : route('home.news-single_en', ['slug'=> $item->slug_en]) }}">
                                         <img src="{{ $item->image }}" alt="{{ app()->getLocale() == 'vi' ? $item->name : $item->name_en }}"/>
+                                        </a>
                                     </div>
                                     <div class="new__content">
                                         <h3 class="new__title">
