@@ -352,6 +352,7 @@ class IndexController extends Controller
             $result['message_myfile'] = trans('message.ban_chua_upload_file');
         } else {
             $myfile = $request->myfile;
+            $size = $request->myfile->getClientSize();
             $allowed = [
                 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // docx
                 'application/pdf', // pdf
@@ -359,6 +360,10 @@ class IndexController extends Controller
             $filetype = $myfile->getMimeType();
             if (!in_array($filetype, $allowed)) {
                 $result['message_myfile'] = trans('message.khong_dung_dinh_dang');
+            } else {
+                if($size > 6097152) { 
+                    $result['message_myfile'] = trans('message.dung_luong_file_qua_lon');
+                }
             }
         }
         
@@ -375,7 +380,9 @@ class IndexController extends Controller
             }
         }
 
+
         if($result != []){
+            
             return json_encode($result);
         }
 

@@ -50,7 +50,7 @@ return [
     'noi_dung_khong_duoc_lon_hon_500_ky_tu'   => 'Nội dung không được lớn hơn 500 ký tự',
     'ban_chua_upload_file' => 'Bạn chưa upload file',
     'khong_dung_dinh_dang' => 'Không đúng định dạng file (docx, pdf)',
-    'dung_luong_file_qua_lon' => 'Dung lượng file ko quá 5M',
+    'dung_luong_file_qua_lon' => 'Dung lượng file ko quá 6M',
     'thong_bao_thanh_cong' => 'Gửi thông tin thành công, chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất. Xin cảm ơn !',
     'ban_chua_nhap_chu_de' => 'Bạn chưa nhập chủ đề',
     'ban_chua_nhap_ma_captcha' => 'Bạn chưa nhập Captcha',

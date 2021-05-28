@@ -47,7 +47,7 @@ return [
     'noi_dung_khong_duoc_lon_hon_500_ky_tu'   => 'Content cannot be larger than 500 characters.',
     'ban_chua_upload_file' => 'You have not attached your CV',
     'khong_dung_dinh_dang' => 'Incorrect file format (docx, pdf)',
-    'dung_luong_file_qua_lon' => 'File size should not exceed 5M',
+    'dung_luong_file_qua_lon' => 'File size should not exceed 6M',
     'thong_bao_thanh_cong' => 'send successful information, we will contact you as soon as possible. Thank you !',
     'ban_chua_nhap_chu_de' => 'You have not entered topic',
     'ban_chua_nhap_ma_captcha' => 'You have not entered code captcha',

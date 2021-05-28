@@ -87,6 +87,8 @@ $(document).ready(function() {
                     $('#error_captchacode').html('');
                 }
 
+                
+
                 if (data.success) {
 
                     $('#frm_contact')[0].reset();

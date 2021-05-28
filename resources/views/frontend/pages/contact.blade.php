@@ -53,7 +53,8 @@
 							<div class="form-group">
 								<div class="group__file">
 									<label>{{ trans('message.dinh_kem_file') }}</label>
-									<input type="file" name="myfile" class="input__flie"/>
+									<input type="file" name="myfile" id="file" class="input__flie demoInputBox" />
+									<span id="file_error"></span>
 								</div>
 								<span class="fr-error" id="error_myfile"></span>
 							</div>
@@ -99,5 +100,25 @@
 				}
 			});
 		});
+
+		function validate() {
+			$("#file_error").html("");
+			$(".demoInputBox").css("border-color","#F0F0F0");
+			var file_upload = $('#file').val();
+			if (file_upload) {
+				var file_size = $('#file')[0].files[0].size;
+							
+				if(file_size > 8097152) {
+					$("#file_error").html("File upload lớn hơn 8MB");
+					$(".demoInputBox").css("border-color","#FF0000");
+					$("#file").val('');
+					alert('File upload lớn hơn 10MB');
+					return false;
+				} 
+				return true;
+			}
+			
+		}
+		
 	</script>
 @endsection
